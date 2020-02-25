@@ -17,6 +17,7 @@ var campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
     
 var url = process.env.DatabaseURL || "mongodb://localhost:27017/yelp_camp_v11";
+// $ export DatabaseURL=mongodb://localhost:27017/yelp_camp_v11
 // Hidden the Database infor "mongodb+srv://username:password@cluster0-jytso.mongodb.net/YC?retryWrites=true&w=majority"
 // Set it up in heroku settings Config Vars
 mongoose.connect(url, {
