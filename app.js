@@ -16,7 +16,10 @@ var campgroundRoutes = require("./routes/campgrounds"),
     commentRoutes = require("./routes/comments"),
     indexRoutes = require("./routes/index");
     
-mongoose.connect("mongodb+srv://YelpCamp:webapple369@cluster0-jytso.mongodb.net/YC?retryWrites=true&w=majority", {
+var url = process.env.DatabaseURL || "mongodb://localhost:27017/yelp_camp_v11";
+// Hidden the Database infor "mongodb+srv://username:password@cluster0-jytso.mongodb.net/YC?retryWrites=true&w=majority"
+// Set it up in heroku settings Config Vars
+mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
